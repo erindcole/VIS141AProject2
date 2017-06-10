@@ -25,18 +25,20 @@ if __name__ == '__main__':
     w.pack()
 
     
-    c = Make.circle(w, canvasWidth, canvasHeight, rad)
-    
+    circle = Make.circle(w, canvasWidth, canvasHeight, rad)
+   
+    print(circle)
     s = Make.square(w, canvasWidth, canvasHeight, side)
     
 
 
     x = random.randint(rad+1, canvasWidth-rad)
     y = random.randint(rad+1, canvasHeight-rad)
-    sys.stdout.flush() 
-    time.sleep(longPause)
-    w.coords(c, x-rad, y-rad, x+rad, y+rad)
+
+    Make.move(circle, w, x, y)
     #while 1:
+    
+    #w.delete(s)
     w.mainloop()
 
     

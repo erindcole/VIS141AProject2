@@ -18,3 +18,10 @@ def square(canvas, canvasWidth, canvasHeight, side):
     points = [x, y, x+side, y, x+side, y+side, x, y+side]
     s = canvas.create_polygon(points)
     return s
+
+def move(item, canvas, x, y):
+    if x%2 == 0:
+        canvas.coords(item, x-rad, y-rad, x+rad, y+rad)
+    else:
+        canvas.coords(item, x+rad, y+rad, x-rad, y-rad)
+
