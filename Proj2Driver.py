@@ -15,8 +15,8 @@ if __name__ == '__main__':
     shortPause = 2
     longPause = 5
 
-    canvasWidth = 750
-    canvasHeight = 750
+    canvasWidth = 600
+    canvasHeight = 600
     rad = 25
     side = 50
 
@@ -27,18 +27,15 @@ if __name__ == '__main__':
     
     circle = Make.circle(w, canvasWidth, canvasHeight, rad)
    
-    print(circle)
-    s = Make.square(w, canvasWidth, canvasHeight, side)
+    square = Make.square(w, canvasWidth, canvasHeight, side)
     
-
-
-    x = random.randint(rad+1, canvasWidth-rad)
-    y = random.randint(rad+1, canvasHeight-rad)
-
-    Make.move(circle, w, x, y)
-    #while 1:
+    while True:
+        time.sleep(.25)
+        dx = random.randint(1, 20)
+        dy = random.randint(1, 20)
+        Make.move(w, canvasWidth, canvasHeight, circle, canvasWidth, canvasHeight)
+        w.update()
     
-    #w.delete(s)
     w.mainloop()
 
     
