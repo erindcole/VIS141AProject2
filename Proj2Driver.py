@@ -30,10 +30,8 @@ if __name__ == '__main__':
     square = Make.square(w, canvasWidth, canvasHeight, side)
     
     while True:
-        time.sleep(.25)
-        dx = random.randint(1, 20)
-        dy = random.randint(1, 20)
-        Make.move(w, canvasWidth, canvasHeight, circle, canvasWidth, canvasHeight)
+        time.sleep(.75)
+        Make.move(w, canvasWidth, canvasHeight, circle, rad*2)
         w.update()
     
     w.mainloop()
